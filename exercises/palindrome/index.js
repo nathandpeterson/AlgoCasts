@@ -13,4 +13,11 @@ function palindrome(str) {
   return palindrome(str.slice(1, str.length-1))
 }
 
+function palindromeEvery(str) {
+  return str.split('').every((char, i) =>{
+    return char === str[str.length - i - 1]
+  })
+
+}
+
 module.exports = palindrome;
